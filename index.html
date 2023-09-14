@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="display" id="display">
+
+        </div>
+        <div class="main" >
+            <button onclick="display.innerHTML+='7'">7</button>
+            <button onclick="display.innerHTML+='8'">8</button>
+            <button onclick="display.innerHTML+='9'">9</button>
+            <button onclick="display.innerHTML=''">C</button><br>
+            <button onclick="display.innerHTML+='4'">4</button>
+            <button onclick="display.innerHTML+='5'">5</button>
+            <button onclick="display.innerHTML+='6'">6</button>
+            <button onclick="display.innerHTML+='+'">+</button><br>
+            <button onclick="display.innerHTML+='1'">1</button>
+            <button onclick="display.innerHTML+='2'">2</button>
+            <button onclick="display.innerHTML+='3'">3</button>
+            <button onclick="display.innerHTML+='*'">*</button><br>
+            <button onclick="display.innerHTML+='0'">0</button>
+            <button onclick="display.innerHTML+='.'">.</button>
+            <button onclick="display.innerHTML+='/'">/</button>
+            
+            <button onclick="display.innerHTML=display.innerHTML.toString().slice(0,-1)">D</button>
+            <br>
+            <button id="equals" onclick="func()">=</button>
+            <button onclick="display.innerHTML+='-'">-</button>
+        </div>
+    </div>
+    <script>
+        function func()
+        {
+            if(display.innerHTML=='')
+            {
+                display.innerHTML='';
+            }
+            else
+            {
+                display.innerHTML=eval(display.innerHTML);
+            }
+        }
+    </script>
+</body>
+</html>
